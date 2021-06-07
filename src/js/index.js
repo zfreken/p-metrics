@@ -21,7 +21,7 @@ window.onload = () => {
 
   const resourceTiming = window.performance.getEntriesByType('resource');
   if (resourceTiming) {
-    const result = resourceTiming.filter(item => item.initiatorType === 'css').map(item => [item.initiatorType,item.name,item.duration]);
+    const result = resourceTiming.filter(item => item.initiatorType === 'script').map(item => [item.initiatorType,item.name,item.duration]);
     console.table(result)
   }
 
